@@ -29,4 +29,12 @@
     <string name="login">Login</string>
     <string name="heading_top">Top</string>
     <string name="heading_courses">Course</string>
+    <string name="lecture">Lectures</string>
+    <string name="home">home</string>
+    <string name="search">search</string>
+    <string name="bookmark">bookmark</string>
+    <string name="feed">feed</string>
+    <string name="job">job</string>
+    <string name="profile">profile</string>
+    <string name="Job">Job</string>
 </resources>
