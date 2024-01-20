@@ -2,12 +2,12 @@ package com.example.careersync.model;
 
 public class Course {
     private String courseName;
-    private Integer rating;
+    private String rating;
     private String type;
-    private  Integer price;
+    private  String price;
     public Course(){}
 
-    public Course(String courseName, Integer rating, String type, Integer price) {
+    public Course(String courseName, String rating, String type, String price) {
         this.courseName = courseName;
         this.rating = rating;
         this.type = type;
@@ -22,11 +22,11 @@ public class Course {
         this.courseName = courseName;
     }
 
-    public Integer getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(Integer rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
@@ -38,11 +38,11 @@ public class Course {
         this.type = type;
     }
 
-    public Integer getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 }
