@@ -37,4 +37,7 @@
     <string name="job">job</string>
     <string name="profile">profile</string>
     <string name="Job">Job</string>
+    <string name="my_profile">My Profile</string>
+    <string name="contact_us">Contact us</string>
+    <string name="about">About</string>
 </resources>
