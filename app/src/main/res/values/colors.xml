@@ -6,5 +6,7 @@
     <color name="statusBar">#581A97</color>
     <color name="toolBar">#7E5F9E</color>
     <color name="Grey">#808080</color>
+    <color name="bg_home">#0E0A0A</color>
+    <color name="toolbar">#0C0C0C</color>
 
 </resources>
