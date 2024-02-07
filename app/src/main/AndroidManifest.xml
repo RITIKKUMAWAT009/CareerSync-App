@@ -13,11 +13,20 @@
         android:theme="@style/Theme.CareerSync"
         tools:targetApi="31">
         <activity
+            android:name=".FeedActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".FindJobActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MyLearningActivity"
             android:exported="false" />
@@ -28,11 +37,7 @@
             android:resizeableActivity="true"
             android:theme="@style/Theme.CareerSync.NoActionBar"
             tools:targetApi="24">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Login"
