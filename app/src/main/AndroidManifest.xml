@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.CareerSync"
         android:usesCleartextTraffic="true"
+
         tools:targetApi="31">
         <activity
             android:name=".FeedActivity"
@@ -43,8 +44,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
         <activity
             android:name=".Login"
