@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/bg_home"
     tools:context=".FindJobActivity">
-
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -102,7 +100,6 @@
                     android:textStyle="bold"
 
                     />
-
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewCourse"
                     android:layout_width="match_parent"
@@ -110,6 +107,12 @@
                     android:layout_marginTop="20dp"
                     tools:listitem="@layout/view_courses">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    tools:listitem="@layout/view_courses">
                 </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
 
