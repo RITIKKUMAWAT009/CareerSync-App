@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -22,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView recyclerViewCourses, recyclerViewTopCourse, recyclerViewLecture, recyclerViewTopLecture;
     CourseAdapter courseAdapter;
     RecyclerView.Adapter<CourseAdapter.ViewHolder> adapter;
+    TextView txUserName;
     ImageView imgJob, imgProfile;
 
     @Override
@@ -32,6 +34,8 @@ public class HomeActivity extends AppCompatActivity {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.black));
+
+//        txUserName.setText(userName);
         ArrayList<Course> courseList = new ArrayList<>();
         courseList.add(new Course("Machine learning", "4", "ml", "100"));
         courseList.add(new Course("Android dev", "5", "android", "200"));
@@ -43,6 +47,11 @@ public class HomeActivity extends AppCompatActivity {
         recyclerViewLecture(courseList);
 
         init();
+        Intent intent = getIntent();
+        String userName = intent.getStringExtra("userName");
+        if (userName != null) {
+            txUserName.setText(userName);
+        }
         imgJob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +72,8 @@ public class HomeActivity extends AppCompatActivity {
     public void init() {
         imgJob = findViewById(R.id.icon_job);
         imgProfile = findViewById(R.id.icon_profile);
+        txUserName = findViewById(R.id.txUserName);
+
     }
 
 

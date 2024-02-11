@@ -72,7 +72,7 @@ public class FindJobActivity extends AppCompatActivity {
 
     public void recyclerViewRecentJob(ArrayList<Course> courseList) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerViewCourses = findViewById(R.id.recyclerViewCourse);
+        recyclerViewCourses = findViewById(R.id.recyclerViewTop);
         recyclerViewCourses.setLayoutManager(linearLayoutManager);
         adapter = new CourseAdapter(courseList);
         recyclerViewCourses.setAdapter(adapter);

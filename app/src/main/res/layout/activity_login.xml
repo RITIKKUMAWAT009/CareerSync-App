@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/statusBar"
+    android:background="@drawable/logo_sp_screen"
     tools:context=".Login">
 
     <ImageView
@@ -21,9 +21,9 @@
 
     <EditText
         android:id="@+id/etUsername"
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="152dp"
         android:autofillHints="username"
         android:background="@drawable/bg_input"
         android:hint="@string/username"
@@ -32,13 +32,13 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgLogin" />
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="44dp"
         android:autofillHints="password"
