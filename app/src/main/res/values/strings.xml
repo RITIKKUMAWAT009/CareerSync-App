@@ -43,4 +43,6 @@
     <string name="recent">Recent Jobs</string>
     <string name="popular">Trending</string>
     <string name="applied">Applied Jobs</string>
+    <string name="login_successfully">Login Successfully</string>
+    <string name="login_failed">Incorrect Username Or Password</string>
 </resources>
