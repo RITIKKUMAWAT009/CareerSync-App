@@ -19,7 +19,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 if (isLoggedIn()) {
+                    SharedPreferences sharedPreferences = getSharedPreferences("login_preference", MODE_PRIVATE);
+                    String userName = sharedPreferences.getString("userName", "");
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    intent.putExtra("userName", userName);
                     startActivity(intent);
                 } else {
                     Intent intent = new Intent(MainActivity.this, Login.class);

@@ -20,8 +20,9 @@ import retrofit2.Response;
 
 public class Login extends AppCompatActivity {
 
-    private static final String KEY_USERNAME = "username";
     private static final String KEY_PASSWORD = "password";
+    public static String USERNAME;
+    //    public static UserT userT;
     EditText etUserName, etPassword;
     Button btnLogin;
 
@@ -55,12 +56,13 @@ public class Login extends AppCompatActivity {
             Response<UserT> response = RetrofitClient.getInstance().apiInterface.login(userCredentials).execute();
             if (response.isSuccessful()) {
                 UserT userT = response.body();
+                Constants.setUserT(userT);
                 Log.d("api", userT.toString());
                 Constants.MESSAGE = getString(R.string.login_successfully);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        setLoginStatus(true);
+                        setLoginStatus(true, userT.getUserName());
                         navigateToHome(Constants.MESSAGE, userT.getUserName());
                     }
                 });
@@ -77,18 +79,19 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    private void setLoginStatus(Boolean isLoggedIn) {
+    private void setLoginStatus(Boolean isLoggedIn, String userName) {
         SharedPreferences sharedPreferences = getSharedPreferences("login_preference", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean("isLoggedIn", isLoggedIn);
+        editor.putString("userName", userName);
         editor.apply();
     }
 
     private void navigateToHome(String message, String userName) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+//        USERNAME = userName;
         Intent intent = new Intent(Login.this, HomeActivity.class);
-        intent.putExtra("user", userName);
+        intent.putExtra("userName", userName);
         startActivity(intent);
-
     }
 }
